@@ -1,0 +1,67 @@
+.leftAlignImage {
+  display: block;
+  align: left;
+  width: 50%;
+}
+
+.rightAlignImage {
+  display: block;
+  align: right;
+  width: 50%;
+}
+
+#map-canvas {
+  height: 80vh;
+  width: 100%;
+  position: absolute;
+  overflow: auto;
+  margin-top: 10px;
+}
+
+#check_tracking, #cancel_tracking, #add_name_to_paddock {
+  display: none;
+}
+
+#start_tracking, #check_tracking, #cancel_tracking, #add_name_to_paddock {
+  background: black;
+  color: white;
+  align: center;
+  margin:0 auto;
+  margin-left: 5px;
+}
+
+#default-text-maps {
+  text-align: center;
+}
+
+#boundary-unit {
+  text-align: left;
+  padding-left: 10px;
+  display: none;
+  float: right;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+#change-distance {
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.button-wrapper {
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 40px;
+}
+
+.btn-default {
+  float: left;
+}
+
+.btn {
+  width: 140px;
+}

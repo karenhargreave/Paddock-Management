@@ -1,0 +1,20 @@
+{
+  "name": "paddock-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./js/index.js",
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "colors": "^1.1.2",
+    "express": "^4.13.1",
+    "lodash": "^3.10.0",
+    "mongoose": "^4.13.17",
+    "morgan": "^1.9.1"
+  }
+}

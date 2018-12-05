@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Welcome
+    </title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.container {
+    padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<h2 style = text-align:center>Welcome to Paddock Management</h2>
+
+
+
+    <div class="container" style="align-content: center">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" id="uname" required>
+      
+      <label for="id"><b>ID</b></label>
+      <input type="number" placeholder="Enter Id" id="uid" required>
+     
+      <button onclick="myFunction()">Enter</button></a>
+
+    </div>
+  </form>
+</div>
+
+
+<script>
+function myFunction()
+{
+    if ( document.getElementById('uname').value == '' || document.getElementById('uid').value == '')
+    {
+        alert('Please Enter Username and ID'); 
+        
+    }
+    else 
+    {
+        location.href = "index.html";
+    }
+}
+</script>
+</body>
+</html>
