@@ -10,4 +10,4 @@ var PathSchema = new Schema({
   
 });
 
-module.exports = mongoose.model('category', PathSchema);
+module.exports = mongoose.model('path', PathSchema);

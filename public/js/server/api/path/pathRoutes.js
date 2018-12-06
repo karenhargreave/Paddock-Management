@@ -1,11 +1,6 @@
 var router = require('express').Router();
-
-// setup boilerplate route jsut to satisfy a request
-// for building
-router.route('/')
-  .get(function(req, res){
-    console.log('Hey from path!!');
-    res.send({ok: true});
-  });
+var controller = require('./pathController');
+var createRoutes = require('../../util/createRoutes');
+createRoutes(controller, router);
 
 module.exports = router;
