@@ -6,6 +6,7 @@ exports.params = function(req, res, next, id) {
     .then(function(path) {
       if (!path) {
         next(new Error('No path with that id'));
+        res.json('No path with that id');
       } else {
         req.path = path;
         next();
@@ -25,9 +26,14 @@ exports.get = function(req, res, next) {
 };
 
 exports.getOne = function(req, res, next) {
-  var path = req.path;
-  res.json(path);
+  Path.find({_id: req.params.id})
+    .then(function(paths){
+      res.json(paths);
+    }, function(err){
+      next(err);
+    });
 };
+
 
 exports.put = function(req, res, next) {
   var path = req.path;
@@ -57,13 +63,12 @@ exports.post = function(req, res, next) {
 };
 
 exports.delete = function(req, res, next) {
-  req.path.remove(function(err, removed) {
-    if (err) {
-      next(err);
-    } else {
-      res.json(removed);
-    }
-  });
+  Path.remove({_id: req.params.id})
+  .then(function(path) {
+
+      res.json("The item has been removed sucessfully");
+    
+  }).catch(next);
 };
 
   
