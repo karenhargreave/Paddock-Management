@@ -6,7 +6,16 @@ var PathSchema = new Schema({
     type: String,
     required: true,
     unique: true
-  }
+  },
+  
+  area: {
+    type: Number,
+    required: true
+  },
+  animal: {
+    type: String,
+    required: false
+  } 
   
 });
 

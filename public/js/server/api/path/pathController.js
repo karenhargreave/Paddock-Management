@@ -5,8 +5,8 @@ exports.params = function(req, res, next, id) {
   Path.findById(id)
     .then(function(path) {
       if (!path) {
-        next(new Error('No path with that id'));
-        res.json('No path with that id');
+        next(new Error('No paddock with that id'));
+        res.json('No paddock with that id');
       } else {
         req.path = path;
         next();
@@ -66,7 +66,7 @@ exports.delete = function(req, res, next) {
   Path.remove({_id: req.params.id})
   .then(function(path) {
 
-      res.json("The item has been removed sucessfully");
+      res.json("The paddock has been removed sucessfully");
     
   }).catch(next);
 };
